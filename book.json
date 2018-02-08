@@ -1,0 +1,20 @@
+{
+    "title": "Lua Tutorial",
+    "description": "",
+    "author": "hypc",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hypc/lua-tutorial"
+    },
+    "plugins": [
+        "theme-opendocs", "advanced-emoji", "bg-nest",
+        "include",
+        "katex",
+        "-highlight", "prism",
+        "-lunr", "-search", "search-pro",
+        "-sharing",
+        "-fontsettings"
+    ],
+    "gitbook": ">=3.0.0",
+    "pluginsConfig": {}
+}
