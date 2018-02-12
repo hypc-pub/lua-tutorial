@@ -32,3 +32,6 @@
     - [for语句](chapter04/for.md)
     - [break语句](chapter04/break.md)
     - [return语句](chapter04/return.md)
+* [函数](chapter05/README.md)
+    - [返回多个结果](chapter05/multiple_results.md)
+    - [可变参数](chapter05/arguments.md)
