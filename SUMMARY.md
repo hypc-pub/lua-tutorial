@@ -35,3 +35,6 @@
 * [函数](chapter05/README.md)
     - [返回多个结果](chapter05/multiple_results.md)
     - [可变参数](chapter05/arguments.md)
+* [函数 -- 进阶篇](chapter06/README.md)
+    - [闭包](chapter06/closures.md)
+    - [尾调用](chapter06/tail_calls.md)
