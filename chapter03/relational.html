@@ -1,0 +1,453 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>关系运算符 · Lua Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="logical.html" />
+    
+    
+    <link rel="prev" href="arithmetic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Lua Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="logical.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="arithmetic.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../chapter01/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            起步
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter02/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            数据类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="./" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            表达式
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="arithmetic.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            算数运算符
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="relational.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            关系运算符
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="logical.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            逻辑运算符
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="concatenation.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            连接运算符
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="other.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            其他运算符
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="precedence.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            运算符优先级
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../chapter04/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            控制结构
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter05/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter06/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数 -- 进阶篇
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;">&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</h1>
+<blockquote>
+<p><code>==</code>(&#x7B49;&#x4E8E;) <code>~=</code>(&#x4E0D;&#x7B49;) <code>&gt;</code>(&#x5927;&#x4E8E;) <code>&lt;</code>(&#x5C0F;&#x4E8E;) <code>&gt;=</code>(&#x5927;&#x4E8E;&#x7B49;&#x4E8E;) <code>&lt;=</code>(&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;)</p>
+</blockquote>
+<pre class="language-"><code class="lang-lua">a <span class="token operator">=</span> <span class="token number">10</span>
+b <span class="token operator">=</span> <span class="token number">7</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">==</span> b<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">--&gt; false</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">~=</span> b<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">--&gt; true</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">&gt;</span> b<span class="token punctuation">)</span>        <span class="token comment" spellcheck="true">--&gt; true</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">&lt;</span> b<span class="token punctuation">)</span>        <span class="token comment" spellcheck="true">--&gt; false</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">&gt;=</span> b<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">--&gt; true</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a <span class="token operator">&lt;=</span> b<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">--&gt; false</span>
+</code></pre>
+<p>Lua&#x6BD4;&#x8F83;&#x6570;&#x5B57;&#x65F6;&#x6309;&#x6570;&#x5B57;&#x5927;&#x5C0F;&#x8FDB;&#x884C;&#xFF0C;&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#x6309;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x4F9D;&#x8D56;&#x672C;&#x5730;&#x73AF;&#x5883;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/bg-nest.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/init.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"关系运算符","level":"2.3.2","depth":2,"next":{"title":"逻辑运算符","level":"2.3.3","depth":2,"path":"chapter03/logical.md","ref":"chapter03/logical.md","articles":[]},"previous":{"title":"算数运算符","level":"2.3.1","depth":2,"path":"chapter03/arithmetic.md","ref":"chapter03/arithmetic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","bg-nest","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"bg-nest":{},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/lua-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lua Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"chapter03/relational.md","mtime":"2018-06-21T11:28:15.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:29:25.132Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

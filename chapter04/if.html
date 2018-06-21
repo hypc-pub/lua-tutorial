@@ -1,0 +1,459 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>if语句 · Lua Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="while.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Lua Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="while.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="./" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../chapter01/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            起步
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter02/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            数据类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter03/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            表达式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="./" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            控制结构
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="if.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            if语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="while.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            while语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="repeat.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            repeat语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="for.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            for语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="break.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            break语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="return.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            return语句
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../chapter05/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter06/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数 -- 进阶篇
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="if&#x8BED;&#x53E5;">if&#x8BED;&#x53E5;</h1>
+<p>if&#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;if&#x8BED;&#x53E5;&#x6709;&#x4E09;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-lua"><span class="token keyword">if</span> conditions <span class="token keyword">then</span>
+    thenpart
+<span class="token keyword">end</span>
+
+<span class="token keyword">if</span> conditions <span class="token keyword">then</span>
+    thenpart
+<span class="token keyword">else</span>
+    elsepart
+<span class="token keyword">end</span>
+
+<span class="token keyword">if</span> conditions <span class="token keyword">then</span>
+    thenpart
+<span class="token keyword">elseif</span> conditions <span class="token keyword">then</span>          <span class="token comment" spellcheck="true">-- &#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;elseif&#x8BED;&#x53E5;&#x5757;</span>
+    elseifpart
+<span class="token keyword">else</span>
+    elsepart
+<span class="token keyword">end</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/bg-nest.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/init.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"if语句","level":"2.4.1","depth":2,"next":{"title":"while语句","level":"2.4.2","depth":2,"path":"chapter04/while.md","ref":"chapter04/while.md","articles":[]},"previous":{"title":"控制结构","level":"2.4","depth":1,"path":"chapter04/README.md","ref":"chapter04/README.md","articles":[{"title":"if语句","level":"2.4.1","depth":2,"path":"chapter04/if.md","ref":"chapter04/if.md","articles":[]},{"title":"while语句","level":"2.4.2","depth":2,"path":"chapter04/while.md","ref":"chapter04/while.md","articles":[]},{"title":"repeat语句","level":"2.4.3","depth":2,"path":"chapter04/repeat.md","ref":"chapter04/repeat.md","articles":[]},{"title":"for语句","level":"2.4.4","depth":2,"path":"chapter04/for.md","ref":"chapter04/for.md","articles":[]},{"title":"break语句","level":"2.4.5","depth":2,"path":"chapter04/break.md","ref":"chapter04/break.md","articles":[]},{"title":"return语句","level":"2.4.6","depth":2,"path":"chapter04/return.md","ref":"chapter04/return.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","bg-nest","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"bg-nest":{},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/lua-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lua Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"chapter04/if.md","mtime":"2018-06-21T11:28:15.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:29:25.132Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

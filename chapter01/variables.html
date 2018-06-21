@@ -1,0 +1,446 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>变量 · Lua Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="identifiers.html" />
+    
+    
+    <link rel="prev" href="chunks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Lua Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="identifiers.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="chunks.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="./" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            起步
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="chunks.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            Chunks
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="variables.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            变量
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="identifiers.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            标志符及关键字
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="comment.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            注释
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../chapter02/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            数据类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter03/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            表达式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter04/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            控制结构
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter05/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter06/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数 -- 进阶篇
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h1>
+<p>&#x53D8;&#x91CF;&#x5728;&#x4F7F;&#x7528;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#xFF0C;&#x5373;&#x521B;&#x5EFA;&#x8BE5;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x7F16;&#x8BD1;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#x7F16;&#x8BD1;&#x5668;&#x9700;&#x8981;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x7ED9;&#x8BED;&#x53E5;&#x53D8;&#x91CF;&#x5F00;&#x8F9F;&#x5B58;&#x50A8;&#x533A;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;</p>
+<p>Lua&#x53D8;&#x91CF;&#x6709;&#x4E09;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3001;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3001;&#x8868;&#x4E2D;&#x7684;&#x57DF;&#x3002;</p>
+<p>Lua&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5168;&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x6015;&#x662F;&#x8BED;&#x53E5;&#x5757;&#x6216;&#x662F;&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x9664;&#x975E;&#x7528;<code>local</code>&#x663E;&#x5F0F;&#x58F0;&#x660E;&#x4E3A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E3A;&#x4ECE;&#x58F0;&#x660E;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5230;&#x6240;&#x5728;&#x8BED;&#x53E5;&#x5757;&#x7ED3;&#x675F;&#x3002;</p>
+<p>&#x53D8;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x5747;&#x4E3A;<code>nil</code>&#x3002;</p>
+<pre class="language-"><code class="lang-lua"><span class="token comment" spellcheck="true">-- test.lua</span>
+a <span class="token operator">=</span> <span class="token number">5</span>               <span class="token comment" spellcheck="true">-- global variables</span>
+<span class="token keyword">local</span> b <span class="token operator">=</span> <span class="token number">5</span>         <span class="token comment" spellcheck="true">-- local variables</span>
+
+<span class="token keyword">function</span> <span class="token function">joke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    c <span class="token operator">=</span> <span class="token number">5</span>           <span class="token comment" spellcheck="true">-- global variables</span>
+    <span class="token keyword">local</span> d <span class="token operator">=</span> <span class="token number">6</span>     <span class="token comment" spellcheck="true">-- local variables</span>
+<span class="token keyword">end</span>
+
+<span class="token function">joke</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span>         <span class="token comment" spellcheck="true">--&gt; 5 nil</span>
+
+<span class="token keyword">do</span>
+    <span class="token keyword">local</span> a <span class="token operator">=</span> <span class="token number">6</span>     <span class="token comment" spellcheck="true">-- local variables</span>
+    b <span class="token operator">=</span> <span class="token number">6</span>           <span class="token comment" spellcheck="true">-- global variables</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">--&gt; 6 6</span>
+<span class="token keyword">end</span>
+
+<span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>         <span class="token comment" spellcheck="true">--&gt; 5 6</span>
+</code></pre>
+<h2 id="&#x8D4B;&#x503C;&#x8BED;&#x53E5;">&#x8D4B;&#x503C;&#x8BED;&#x53E5;</h2>
+<p>&#x8D4B;&#x503C;&#x662F;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x548C;&#x6539;&#x53D8;&#x8868;&#x57DF;&#x7684;&#x6700;&#x57FA;&#x672C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-lua">a <span class="token operator">=</span> <span class="token string">&quot;hello&quot;</span>
+t<span class="token punctuation">.</span>n <span class="token operator">=</span> t<span class="token punctuation">.</span>n <span class="token operator">+</span> <span class="token number">1</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x540C;&#x65F6;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-lua">a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span>     <span class="token comment" spellcheck="true">-- &#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;a = 1; b = 2</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">--&gt; 1 2</span>
+a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a     <span class="token comment" spellcheck="true">-- &#x4EA4;&#x6362;a&#x548C;b&#x7684;&#x503C;</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">--&gt; 2 1</span>
+</code></pre>
+<p>&#x5F53;&#x53D8;&#x91CF;&#x4E2A;&#x6570;&#x548C;&#x503C;&#x7684;&#x4E2A;&#x6570;&#x4E0D;&#x4E00;&#x81F4;&#x65F6;&#xFF0C;lua&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x4E24;&#x6761;&#x89C4;&#x5219;&#xFF1A;</p>
+<ul>
+<li>&#x53D8;&#x91CF;&#x4E2A;&#x6570; &gt; &#x503C;&#x7684;&#x4E2A;&#x6570;&#xFF1A;&#x6309;&#x53D8;&#x91CF;&#x4E2A;&#x6570;&#x8865;&#x8DB3;<code>nil</code></li>
+<li>&#x53D8;&#x91CF;&#x4E2A;&#x6570; &lt; &#x503C;&#x7684;&#x4E2A;&#x6570;&#xFF1A;&#x5FFD;&#x7565;&#x591A;&#x4F59;&#x7684;&#x503C;</li>
+</ul>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/bg-nest.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/init.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"变量","level":"2.1.2","depth":2,"next":{"title":"标志符及关键字","level":"2.1.3","depth":2,"path":"chapter01/identifiers.md","ref":"chapter01/identifiers.md","articles":[]},"previous":{"title":"Chunks","level":"2.1.1","depth":2,"path":"chapter01/chunks.md","ref":"chapter01/chunks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","bg-nest","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"bg-nest":{},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/lua-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lua Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"chapter01/variables.md","mtime":"2018-06-21T11:28:15.052Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:29:25.132Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

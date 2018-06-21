@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        image: lua-tutorial
+        container_name: lua-tutorial
+        ports:
+            - 4040:4000
+        restart: always

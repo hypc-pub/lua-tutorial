@@ -1,0 +1,507 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>for语句 · Lua Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="break.html" />
+    
+    
+    <link rel="prev" href="repeat.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Lua Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="break.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="repeat.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            介绍
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../chapter01/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            起步
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter02/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            数据类型
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter03/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            表达式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="./" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            控制结构
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="if.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            if语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="while.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            while语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="repeat.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            repeat语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="for.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            for语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="break.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            break语句
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="return.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            return语句
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../chapter05/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../chapter06/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            函数 -- 进阶篇
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="for&#x8BED;&#x53E5;">for&#x8BED;&#x53E5;</h1>
+<p>Lua&#x4E2D;&#x6709;&#x4E24;&#x79CD;for&#x5FAA;&#x73AF;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x503C;for&#x5FAA;&#x73AF;</li>
+<li>&#x6CDB;&#x578B;for&#x5FAA;&#x73AF;</li>
+</ul>
+<h2 id="&#x6570;&#x503C;for&#x5FAA;&#x73AF;">&#x6570;&#x503C;for&#x5FAA;&#x73AF;</h2>
+<p>&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-lua"><span class="token keyword">for</span> var<span class="token operator">=</span>exp1<span class="token punctuation">,</span>exp2<span class="token punctuation">,</span>exp3 <span class="token keyword">do</span>
+    statements
+<span class="token keyword">end</span>
+</code></pre>
+<p>for&#x5C06;exp3&#x4F5C;&#x4E3A;exp1&#x5230;exp2&#x7684;&#x6B65;&#x957F;&#xFF0C;&#x5176;&#x4E2D;exp3&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#xFF0C;&#x9ED8;&#x8BA4;&#x6B65;&#x957F;&#x662F;<code>1</code>&#x3002;</p>
+<h4 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h4>
+<h5 id="&#x4E09;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;">&#x4E09;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</h5>
+<pre class="language-"><code class="lang-lua"><span class="token keyword">for</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">do</span>         <span class="token comment" spellcheck="true">-- f(x)&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x6B21;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+
+<span class="token keyword">for</span> i<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span> <span class="token keyword">do</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+</code></pre>
+<h5 id="&#x63A7;&#x5236;&#x53D8;&#x91CF;var&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x58F0;&#x660E;&#xFF0C;&#x4E14;&#x53EA;&#x5728;&#x5FAA;&#x73AF;&#x5185;&#x90E8;&#x6709;&#x6548;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x4FDD;&#x7559;var&#x7684;&#x503C;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x3002;">&#x63A7;&#x5236;&#x53D8;&#x91CF;var&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x58F0;&#x660E;&#xFF0C;&#x4E14;&#x53EA;&#x5728;&#x5FAA;&#x73AF;&#x5185;&#x90E8;&#x6709;&#x6548;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x4FDD;&#x7559;var&#x7684;&#x503C;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x3002;</h5>
+<pre class="language-"><code class="lang-lua"><span class="token keyword">local</span> found <span class="token operator">=</span> <span class="token keyword">nil</span>
+<span class="token keyword">for</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span> <span class="token keyword">do</span>
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">9</span> <span class="token keyword">then</span>
+        found <span class="token operator">=</span> i
+        <span class="token keyword">break</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span class="token function">print</span><span class="token punctuation">(</span>found<span class="token punctuation">)</span>            <span class="token comment" spellcheck="true">--&gt; 9</span>
+</code></pre>
+<h5 id="&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x8981;&#x6539;&#x53D8;&#x63A7;&#x5236;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x6837;&#x505A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E0D;&#x53EF;&#x9884;&#x77E5;&#x7684;&#x3002;&#x5982;&#x679C;&#x8981;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#xFF0C;&#x4F7F;&#x7528;break&#x8BED;&#x53E5;&#x3002;">&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x8981;&#x6539;&#x53D8;&#x63A7;&#x5236;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x6837;&#x505A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E0D;&#x53EF;&#x9884;&#x77E5;&#x7684;&#x3002;&#x5982;&#x679C;&#x8981;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#xFF0C;&#x4F7F;&#x7528;<code>break</code>&#x8BED;&#x53E5;&#x3002;</h5>
+<h2 id="&#x6CDB;&#x578B;for&#x5FAA;&#x73AF;">&#x6CDB;&#x578B;for&#x5FAA;&#x73AF;</h2>
+<p>&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-lua"><span class="token keyword">for</span> i<span class="token punctuation">,</span>v <span class="token keyword">in</span> <span class="token function">ipairs</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token keyword">do</span>         <span class="token comment" spellcheck="true">-- &#x904D;&#x5386;&#x6570;&#x7EC4;</span>
+    statements
+<span class="token keyword">end</span>
+
+<span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> <span class="token function">pairs</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token keyword">do</span>          <span class="token comment" spellcheck="true">-- &#x904D;&#x5386;table</span>
+    statements
+<span class="token keyword">end</span>
+</code></pre>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-lua">days <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;Suanday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Monday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Tuesday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Wednesday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Thursday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Friday&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Saturday&quot;</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span>v <span class="token keyword">in</span> <span class="token function">ipairs</span><span class="token punctuation">(</span>days<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+<span class="token comment" spellcheck="true">--[[&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+1       Suanday
+2       Monday
+3       Tuesday
+4       Wednesday
+5       Thursday
+6       Friday
+7       Saturday
+]]</span>
+
+a <span class="token operator">=</span> <span class="token punctuation">{</span>a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> <span class="token function">pairs</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token keyword">do</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+<span class="token comment" spellcheck="true">--[[&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+b       2
+a       1
+]]</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/bg-nest.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-bg-nest/init.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"for语句","level":"2.4.4","depth":2,"next":{"title":"break语句","level":"2.4.5","depth":2,"path":"chapter04/break.md","ref":"chapter04/break.md","articles":[]},"previous":{"title":"repeat语句","level":"2.4.3","depth":2,"path":"chapter04/repeat.md","ref":"chapter04/repeat.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","bg-nest","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"bg-nest":{},"include":{},"katex":{},"prism":{},"search-pro":{},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/lua-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lua Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"chapter04/for.md","mtime":"2018-06-21T11:28:15.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:29:25.132Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
